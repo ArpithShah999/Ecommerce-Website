@@ -58,7 +58,19 @@
     </script>
 
     <!-- FOOTER -->
-    <div id="4"></div>
+    <div id="4">
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+    
+    </div>
     
 
 </body>
